@@ -26,11 +26,13 @@
   &::after {
     font-size: 14px;
     color: @color;
+    display: block;
+    height: auto;
     content: attr(aria-controls);
     position: absolute;
     padding: 6px 12px;
     white-space: nowrap;
-    z-index: -1;
+    z-index: 3000;
     left: 50%;
     background: @poptipBg;
     line-height: 1;

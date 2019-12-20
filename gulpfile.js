@@ -27,7 +27,7 @@ function style() {
 }
 
 function watch() {
-  gulp.watch(watchSrc, style);
+  gulp.watch(paths.watchSrc, style);
 }
 
 const dev = gulp.series(clean, gulp.parallel(style), gulp.parallel(watch));
