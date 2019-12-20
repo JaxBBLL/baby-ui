@@ -1,0 +1,27 @@
+@import '../common/var.less';
+.alert {
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 14px;
+  border-color: @border-color;
+  color: fadeout(@text-color, 20%);
+  background-color: @background-color;
+}
+
+.alert--success {
+  color: @primary-color;
+  background-color: fadeout(@primary-color, 80%);
+  border-color: fadeout(@primary-color, 60%);
+}
+
+.alert--title {
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.alert__close {
+  float: right;
+  cursor: pointer;
+}

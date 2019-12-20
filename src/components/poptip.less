@@ -1,0 +1,64 @@
+@poptipBg: rgba(10, 10, 10, 0.8);
+@color: #fff;
+@triangle: 8px;
+@distance: -12px;
+@abs_distance: 12px;
+.poptip {
+  position: relative;
+  z-index: 101;
+  &::before,
+  &::after {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.3s ease 0.2s;
+    box-sizing: border-box;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    left: calc(~"50% - @{triangle}");
+  }
+
+  &::after {
+    font-size: 14px;
+    color: @color;
+    content: attr(aria-controls);
+    position: absolute;
+    padding: 6px 12px;
+    white-space: nowrap;
+    z-index: -1;
+    left: 50%;
+    background: @poptipBg;
+    line-height: 1;
+    border-radius: 2px;
+  }
+  &.poptip--top::before {
+    border-width: @triangle @triangle 0 @triangle;
+    border-color: @poptipBg transparent transparent transparent;
+    top: 0px;
+    transform: translateX(0%) translateY(@distance);
+  }
+  &.poptip--top::after {
+    bottom: 100%;
+    transform: translateX(-50%) translateY(@distance);
+  }
+  &.poptip--bottom::before {
+    bottom: 0px;
+    transform: translateX(0%) translateY(@abs_distance);
+    border-width: 0 @triangle @triangle @triangle;
+    border-color: transparent transparent @poptipBg transparent;
+  }
+  &.poptip--bottom::after {
+    top: 100%;
+    transform: translateX(-50%) translateY(@abs_distance);
+  }
+  &:hover::before,
+  &:hover::after {
+    visibility: visible;
+    opacity: 1;
+  }
+}

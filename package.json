@@ -1,0 +1,42 @@
+{
+  "name": "babyui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:css": "gulp",
+    "dev:js": "rollup -w -c",
+    "build": "gulp build && rollup -c"
+  },
+  "keywords": [],
+  "author": "JaxBBLL",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-less": "^4.0.1",
+    "gulp-plumber": "^1.2.1",
+    "rollup": "^1.21.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-flow-no-whitespace": "^1.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-uglify": "^6.0.3"
+  },
+  "engines": {
+    "node": ">= 8.11.1",
+    "npm": ">= 5.6.0"
+  },
+  "browserslist": [
+    "last 4 versions",
+    "Android >= 4.0",
+    "ie >= 9"
+  ]
+}

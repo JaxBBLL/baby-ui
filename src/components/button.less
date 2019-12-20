@@ -1,0 +1,141 @@
+@import "../common/var.less";
+@import "../common/animation.less";
+
+.button {
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: @button-default-background-color;
+  border: 1px solid @button-default-border-color;
+  border-color: @button-default-border-color;
+  color: @button-default-color;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: 0.1s;
+  font-weight: 500;
+  user-select: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  &:focus,
+  &:hover {
+    color: @button-primary-background-color;
+    background-color: lighten(@button-primary-background-color, 32%);
+    border-color: lighten(@button-primary-background-color, 20%);
+  }
+  & + .button {
+    margin-left: 10px;
+  }
+  &.is-round {
+    border-radius: 20px;
+    padding: 12px 23px;
+  }
+  &.is-disabled,
+  &[disabled],
+  &.is-disabled:focus,
+  &[disabled]:focus,
+  &.is-disabled:hover,
+  &[disabled]:hover {
+    color: lighten(@button-default-color, 40%);
+    cursor: not-allowed;
+    background-image: none;
+    background-color: @button-default-background-color;
+    border-color: lighten(@border-color, 3%);
+  }
+  &.is-loading {
+    pointer-events: none;
+    opacity: 0.5;
+    &:before {
+      content: "\2731";
+      display: inline-block;
+      animation: rotating 2s linear infinite;
+    }
+  }
+}
+
+.button--primary {
+  color: @button-primary-color;
+  background-color: @button-primary-background-color;
+  border-color: @button-primary-border-color;
+  &:focus,
+  &:hover {
+    color: @button-primary-color;
+    background: lighten(@button-primary-background-color, 10%);
+    border-color: lighten(@button-primary-border-color, 10%);
+  }
+  &.is-disabled,
+  &[disabled],
+  &.is-disabled:active,
+  &[disabled]:active,
+  &.is-disabled:focus,
+  &[disabled]:focus,
+  &.is-disabled:hover,
+  &[disabled]:hover {
+    color: @button-primary-color;
+    background: lighten(@button-primary-background-color, 20%);
+    border-color: lighten(@button-primary-border-color, 20%);
+  }
+}
+
+.button--text {
+  border-color: transparent;
+  color: @button-primary-background-color;
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  &:focus,
+  &:hover {
+    color: lighten(@button-primary-background-color, 10%);
+    border-color: transparent;
+    background-color: transparent;
+  }
+  &.is-disabled,
+  &[disabled],
+  &.is-disabled:active,
+  &[disabled]:active,
+  &.is-disabled:focus,
+  &[disabled]:focus,
+  &.is-disabled:hover,
+  &[disabled]:hover {
+    border-color: transparent;
+  }
+}
+
+.button-group {
+  display: inline-block;
+  vertical-align: middle;
+  &:after,
+  &:before {
+    display: table;
+    content: "";
+  }
+  > .button {
+    float: left;
+    position: relative;
+    &:hover {
+      z-index: 2;
+    }
+    & + .button {
+      margin-left: 0;
+    }
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+    &:not(:last-child) {
+      margin-right: -1px;
+    }
+  }
+}

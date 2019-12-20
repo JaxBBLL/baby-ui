@@ -1,0 +1,24 @@
+@import '../common/var.less';
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: @background-color;
+  border-radius: 4px;
+  >.breadcrumb__item {
+    display: inline-block;
+  }
+  >.breadcrumb__item a {
+    color: @primary-color;
+    text-decoration: none;
+  }
+  > .breadcrumb__item.active,
+  > .breadcrumb__item.active a {
+    color: @gray;
+  }
+  > .breadcrumb__item+.breadcrumb__item:before {
+    padding: 0 5px;
+    color: @gray-lighter;
+    content: "/\00a0";
+  }
+}

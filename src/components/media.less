@@ -1,0 +1,36 @@
+@import '../common/var.less';
+.media {
+  overflow: hidden;
+  zoom: 1;
+  margin-top: 15px;
+  color: @text-color;
+  .media__body,
+  .media__left,
+  .media__right {
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+
+.media__body {
+  overflow: hidden;
+  zoom: 1;
+  width: 10000px;
+}
+
+.media__left {
+  padding-right: 10px;
+}
+
+.media__right {
+  padding-left: 10px;
+}
+
+.media-object {
+  display: block;
+}
+
+.media-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}

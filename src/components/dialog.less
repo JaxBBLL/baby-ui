@@ -1,0 +1,105 @@
+@import "../common/var.less";
+.dialog__wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  background-color: rgba(25, 28, 34, 0.88);
+  text-align: center;
+  font-size: 0;
+  overflow: auto;
+  z-index: 3000;
+  white-space: nowrap;
+  display: none;
+  opacity: 0;
+  transition: all 0.3s;
+  &.in {
+    display: block;
+  }
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 90%;
+    vertical-align: middle;
+  }
+  .dialog {
+    display: inline-block;
+    text-align: left;
+    border-radius: 4px;
+    background-color: #fff;
+    vertical-align: middle;
+    outline: 0;
+    position: relative;
+    font-size: 14px;
+    width: auto;
+    white-space: normal;
+    transition: all 3s;
+  }
+  .dialog__header {
+    padding: 10px 15px;
+    border-bottom: 1px solid @border-color;
+  }
+  .dialog__title {
+    line-height: 24px;
+    font-size: 18px;
+    color: @text-color;
+  }
+  .dialog__close {
+    float: right;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: @gray;
+  }
+  .dialog__body {
+    padding: 15px;
+    min-height: 60px;
+    overflow: auto;
+    min-width: 300px;
+  }
+  .dialog__footer {
+    padding: 10px 15px;
+    &.dialog__footer--center {
+      text-align: center;
+    }
+    &.dialog__footer--right {
+      text-align: right;
+    }
+  }
+}
+
+@media (max-width: @screen-xs) {
+  .dialog {
+    max-width: @dialog-xs;
+  }
+}
+
+@media (min-width: @screen-xs) {
+  .dialog {
+    max-width: @dialog-xs;
+  }
+}
+
+@media (min-width: @screen-sm) {
+  .dialog {
+    max-width: @dialog-sm;
+  }
+}
+
+@media (min-width: @screen-md) {
+  .dialog {
+    max-width: @dialog-md;
+  }
+}
+
+@media (min-width: @screen-lg) {
+  .dialog {
+    max-width: @dialog-lg;
+  }
+}

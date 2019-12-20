@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>example</title>
+  <link rel="stylesheet" href="../dist/babyui.css">
+  <script src="../dist/babyui.js"></script>
+  <style>
+    html,
+    body {
+      scroll-behavior: smooth;
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      display: flex;
+      overflow: hidden;
+    }
+
+    .app-nav {
+      width: 200px;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
+      height: 100vh;
+      margin-right: 20px;
+    }
+
+    .app-nav:hover {
+      overflow-y: auto;
+    }
+
+    .app-nav a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      padding: 12px 30px;
+    }
+
+    .app-nav a+a {
+      border-top: 1px dashed #c9c9c9;
+    }
+
+    .app-nav a:hover {
+      color: #38f;
+    }
+
+    .app-main {
+      flex: 1;
+      padding: 15px;
+      padding-bottom: 100px;
+      background-color: #fff;
+      overflow: auto;
+      scroll-behavior: smooth;
+    }
+
+    section+section {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px dashed #c9c9c9;
+    }
+
+    .m-to-top {
+      position: fixed;
+      right: 2rem;
+      bottom: 2rem;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      color: #38f;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .iconos-list>span {
+      display: inline-block;
+      padding: 15px;
+      position: relative;
+    }
+
+    .iconos-list>span:hover {
+      background-color: #38f;
+    }
+
+    .iconos-list span:hover i {
+      color: #fff;
+    }
+
+    @media (-webkit-max-device-pixel-ratio: 1) {
+      ::-webkit-scrollbar-track-piece {
+        background-color: #fff;
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #c2c2c2;
+        background-clip: padding-box;
+        min-height: 28px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #a0a0a0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="m-to-top" href="#button">
+    <i class="iconoo-upArrow"></i>
+  </a>
+  <div class="app-nav">
+    <a href="#button">按钮</a>
+    <a href="#alert">alert</a>
+    <a href="#icon">icon</a>
+    <a href="#breadcrumb">breadcrumb</a>
+    <a href="#panel">面板</a>
+    <a href="#list">列表组</a>
+    <a href="#media">media</a>
+    <a href="#pagination">分页</a>
+    <a href="#input">表单</a>
+    <a href="#radio">radio</a>
+    <a href="#checkbox">checkbox</a>
+    <a href="#dialog">dialog</a>
+    <a href="#table">table</a>
+    <a href="#poptip">poptip</a>
+    <a href="#tabs">tabs</a>
+  </div>
+  <div class="app-main">
+    <section id="button">
+      <h2>按钮</h2>
+      <h4>基本</h4>
+      <button class="button">按钮</button>
+      <button class="button button--primary">按钮</button>
+      <button class="button button--primary is-round">圆角按钮</button>
+      <h4>禁用按钮</h4>
+      <button class="button is-disabled">按钮</button>
+      <button class="button button--primary is-disabled">按钮</button>
+      <h4>文本按钮</h4>
+      <button class="button button--text">文本按钮</button>
+      <button class="button button--text is-disabled">禁用文本</button>
+      <button class="button button--text" disabled>禁用文本</button>
+      <h4>loading按钮</h4>
+      <button class="button button--primary is-loading">
+        loading按钮
+      </button>
+      <h4>按钮组</h4>
+      <div class="button-group">
+        <button class="button button--primary">aa</button>
+        <button class="button">bb</button>
+        <button class="button">cc</button>
+        <button class="button">dd</button>
+        <button class="button">ee</button>
+      </div>
+    </section>
+    <section id="alert">
+      <h2>alert</h2>
+      <div class="alert">
+        <div class="alert--title">带辅助性文字介绍</div>
+        alert tip
+      </div>
+      <div class="alert alert--success">
+        <div class="alert--title">带辅助性文字介绍</div>
+        alert tip
+      </div>
+      <div class="alert alert--success">
+        <span class="alert__close" data-dismiss="alert">&times;</span> alert tip
+      </div>
+      <div class="alert alert--success">
+        <span class="alert__close" data-dismiss="alert">&times;</span> alert tip
+      </div>
+    </section>
+    <section id="icon">
+      <h2>图标</h2>
+      <h4>使用 icono</h4>
+      <div class="iconos-list">
+        <span title="iconoo-pin"><i class="iconoo-pin"></i></span>
+        <span title="iconoo-locationArrow"><i class="iconoo-locationArrow"></i></span>
+        <span><i class="iconoo-sync"></i></span>
+        <span><i class="iconoo-reset"></i></span>
+        <span><i class="iconoo-share"></i></span>
+        <span><i class="iconoo-search"></i></span>
+        <span><i class="iconoo-home"></i></span>
+        <span><i class="iconoo-bars"></i></span>
+        <span><i class="iconoo-ellipsis"></i></span>
+        <span><i class="iconoo-tiles"></i></span>
+        <span><i class="iconoo-list"></i></span>
+        <span><i class="iconoo-smile"></i></span>
+        <span><i class="iconoo-frown"></i></span>
+        <span><i class="iconoo-meh"></i></span>
+        <span><i class="iconoo-volume"></i></span>
+        <span><i class="iconoo-volumeLow"></i></span>
+        <span><i class="iconoo-volumeMedium"></i></span>
+        <span><i class="iconoo-volumeHigh"></i></span>
+        <span><i class="iconoo-volumeDecrease"></i></span>
+        <span><i class="iconoo-volumeIncrease"></i></span>
+        <span><i class="iconoo-volumeMute"></i></span>
+        <span><i class="iconoo-play"></i></span>
+        <span><i class="iconoo-pause"></i></span>
+        <span><i class="iconoo-stop"></i></span>
+        <span><i class="iconoo-rewind"></i></span>
+        <span><i class="iconoo-forward"></i></span>
+        <span><i class="iconoo-next"></i></span>
+        <span><i class="iconoo-previous"></i></span>
+        <span><i class="iconoo-rightArrow"></i></span>
+        <span><i class="iconoo-leftArrow"></i></span>
+        <span><i class="iconoo-upArrow"></i></span>
+        <span><i class="iconoo-downArrow"></i></span>
+        <span><i class="iconoo-check"></i></span>
+        <span><i class="iconoo-checkCircle"></i></span>
+        <span><i class="iconoo-cross"></i></span>
+        <span><i class="iconoo-crossCircle"></i></span>
+        <span><i class="iconoo-plus"></i></span>
+        <span><i class="iconoo-plusCircle"></i></span>
+        <span><i class="iconoo-caretRight"></i></span>
+        <span><i class="iconoo-caretLeft"></i></span>
+        <span><i class="iconoo-caretUp"></i></span>
+        <span><i class="iconoo-caretDown"></i></span>
+        <span><i class="iconoo-caretRightCircle"></i></span>
+        <span><i class="iconoo-caretLeftCircle"></i></span>
+        <span><i class="iconoo-caretUpCircle"></i></span>
+        <span><i class="iconoo-caretDownCircle"></i></span>
+        <span><i class="iconoo-caretRightSquare"></i></span>
+        <span><i class="iconoo-caretLeftSquare"></i></span>
+        <span><i class="iconoo-caretUpSquare"></i></span>
+        <span><i class="iconoo-caretDownSquare"></i></span>
+      </div>
+    </section>
+    <section id="breadcrumb">
+      <h2>breadcrumb</h2>
+      <ol class="breadcrumb">
+        <li class="breadcrumb__item"><a href="#">Home</a></li>
+        <li class="breadcrumb__item"><a href="#">Library</a></li>
+        <li class="breadcrumb__item active">Data</li>
+      </ol>
+    </section>
+    <section id="panel">
+      <h2>panel</h2>
+      <div class="panel panel--default">
+        <div class="panel__heading">Panel title</div>
+        <div class="panel__body">
+          Panel content
+        </div>
+      </div>
+    </section>
+    <section id="list">
+      <h2>list</h2>
+      <ul class="list-group">
+        <li class="list-group__item list-group--primary">Cras justo odio</li>
+        <li class="list-group__item">Dapibus ac facilisis in</li>
+        <li class="list-group__item">Morbi leo risus</li>
+        <li class="list-group__item">Porta ac consectetur ac</li>
+        <li class="list-group__item">Vestibulum at eros</li>
+      </ul>
+    </section>
+    <section id="media">
+      <h2>media</h2>
+      <div class="media">
+        <div class="media__left">
+          <a href="#">
+            <img class="media-object"
+              src="http://cms-bucket.nosdn.127.net/2018/10/17/2fdb7fadb005496d9cf4b20f26003f8b.png" width="117">
+          </a>
+        </div>
+        <div class="media__body">
+          <h4 class="media-heading">巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元</h4> 巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元巧合？蓬佩奥刚到利雅得
+          沙特就给了美国一亿美元巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元
+        </div>
+      </div>
+      <div class="media">
+        <div class="media__body">
+          <h4 class="media-heading">巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元</h4> 巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元巧合？蓬佩奥刚到利雅得
+          沙特就给了美国一亿美元巧合？蓬佩奥刚到利雅得 沙特就给了美国一亿美元
+        </div>
+        <div class="media__right">
+          <a href="#">
+            <img class="media-object"
+              src="http://cms-bucket.nosdn.127.net/2018/10/17/2fdb7fadb005496d9cf4b20f26003f8b.png" width="117"></a>
+        </div>
+      </div>
+    </section>
+    <section id="pagination">
+      <h2>pagination</h2>
+      <ul class="pagination">
+        <li class="disabled"><a href="#"><span>&laquo;</span></a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#"><span>&raquo;</span></a></li>
+      </ul>
+    </section>
+    <section id="input">
+      <h2>表单</h2>
+      <h4>行内input</h4>
+      <div class="input input--inline">
+        <input type="text" autocomplete="off" placeholder="请输入内容" class="input__inner">
+      </div>
+      <h4>行内禁用input</h4>
+      <div class="input input--inline">
+        <input type="text" autocomplete="off" disabled placeholder="请输入内容" class="input__inner">
+      </div>
+      <h4>块级input</h4>
+      <div class="input">
+        <input type="text" autocomplete="off" placeholder="请输入内容" class="input__inner">
+        <div class="input__error">
+          请输入邮箱地址
+        </div>
+      </div>
+      <h4>error input</h4>
+      <div class="input input--inline">
+        <input class="input__inner is-error" type="text" autocomplete="off" placeholder="请输入邮箱地址">
+        <div class="input__error">
+          请输入邮箱地址
+        </div>
+      </div>
+      <h4>文本域</h4>
+      <div class="textarea">
+        <textarea placeholder="请输入内容" class="textarea__inner"></textarea>
+      </div>
+      <h4>行内文本域</h4>
+      <div class="textarea textarea--inline">
+        <textarea placeholder="请输入内容" class="textarea__inner"></textarea>
+      </div>
+      <h4>文本域禁用</h4>
+      <div class="textarea textarea--inline">
+        <textarea disabled placeholder="请输入内容" class="textarea__inner"></textarea>
+      </div>
+      <h4>文本域error</h4>
+      <div class="textarea textarea--inline">
+        <textarea placeholder="请输入内容" class="textarea__inner is-error"></textarea>
+        <div class="textarea__error">
+          请输入内容
+        </div>
+      </div>
+      <h4>select</h4>
+      <div class="select select--inline">
+        <select class="select__inner">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <h4>select</h4>
+      <div class="select select--inline">
+        <select class="select__inner is-error">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        <div class="select__error">请选择</div>
+      </div>
+      <h4>select multiple </h4>
+      <div class="select select--inline">
+        <select multiple class="select__inner">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <h4>输入框prepend</h4>
+      <div class="input input-group input-group--prepend">
+        <div class="input-group__prepend">http://</div>
+        <input type="text" placeholder="请输入内容" class="input__inner">
+      </div>
+      <h4>输入框append</h4>
+      <div class="input input-group input-group--append">
+        <input type="text" placeholder="请输入内容" class="input__inner">
+        <div class="input-group__append">.com</div>
+      </div>
+      <h4>输入框</h4>
+      <div class="input input-group input-group--append">
+        <input type="text" placeholder="请输入内容" class="input__inner">
+        <div class="input-group__append">
+          <button type="button" class="button button--primary">搜索</button>
+        </div>
+      </div>
+      <h4>表单</h4>
+      <form class="form">
+        <div class="form-group">
+          <div class="form-group__label is-require">姓名：</div>
+          <div class="form-group__content">
+            <div class="input">
+              <input type="text" autocomplete="off" placeholder="请输入内容" class="input__inner is-error">
+              <div class="input__error">请输入内容</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-group__label">性别：</div>
+          <div class="form-group__content">
+            <label class="radio">
+              <input type="radio" class="radio__original" value="1" name="state" checked>
+              <span class="radio__inner"></span>
+              <span class="radio__label">男</span>
+            </label>
+            <label class="radio">
+              <input type="radio" class="radio__original" value="2" name="state">
+              <span class="radio__inner"></span>
+              <span class="radio__label">女</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-group__label">等级：</div>
+          <div class="form-group__content">
+            <div class="select">
+              <select class="select__inner">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-group__label">爱好：</div>
+          <div class="form-group__content">
+            <label class="checkbox">
+              <input type="checkbox" checked class="checkbox__original" value="2">
+              <span class="checkbox__inner"></span>
+              <span class="checkbox__label">游泳</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__original" value="1">
+              <span class="checkbox__inner"></span>
+              <span class="checkbox__label">跑步</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-group__label"></div>
+          <div class="form-group__content">
+            <button type="button" class="button button--primary">确认</button>
+            <button type="reset" class="button">重置</button>
+          </div>
+        </div>
+      </form>
+      <h4>行内表单</h4>
+      <form class="form form--inline">
+        <div class="form-group">
+          <div class="form-group__label">姓名：</div>
+          <div class="form-group__content">
+            <div class="input">
+              <input type="text" autocomplete="off" placeholder="请输入内容" class="input__inner">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-group__label">姓名：</div>
+          <div class="form-group__content">
+            <div class="input">
+              <input type="text" autocomplete="off" placeholder="请输入内容" class="input__inner">
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section id="radio">
+      <h2>radio</h2>
+      <h4>基础用法</h4>
+      <label class="radio">
+        <input type="radio" class="radio__original" value="1" name="state" checked>
+        <span class="radio__inner"></span>
+        <span class="radio__label">大</span>
+      </label>
+      <label class="radio">
+        <input type="radio" class="radio__original" value="2" name="state">
+        <span class="radio__inner"></span>
+        <span class="radio__label">中</span>
+      </label>
+      <label class="radio">
+        <input type="radio" class="radio__original" value="3" name="state">
+        <span class="radio__inner"></span>
+        <span class="radio__label">小</span>
+      </label>
+      <h4>禁用状态</h4>
+      <label class="radio">
+        <input type="radio" disabled class="radio__original" value="2" checked>
+        <span class="radio__inner"></span>
+        <span class="radio__label">小</span>
+      </label>
+      <label class="radio">
+        <input type="radio" disabled class="radio__original" value="3">
+        <span class="radio__inner"></span>
+        <span class="radio__label">小</span>
+      </label>
+    </section>
+    <section id="checkbox">
+      <h2>checkbox</h2>
+      <h4>基础用法</h4>
+      <label class="checkbox">
+        <input type="checkbox" checked class="checkbox__original" value="2">
+        <span class="checkbox__inner"></span>
+        <span class="checkbox__label">苹果</span>
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" class="checkbox__original" value="1">
+        <span class="checkbox__inner"></span>
+        <span class="checkbox__label">香蕉</span>
+      </label>
+      <h4>禁用</h4>
+      <label class="checkbox">
+        <input type="checkbox" disabled checked class="checkbox__original" value="2">
+        <span class="checkbox__inner"></span>
+        <span class="checkbox__label">苹果</span>
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" disabled class="checkbox__original" value="1">
+        <span class="checkbox__inner"></span>
+        <span class="checkbox__label">香蕉</span>
+      </label>
+    </section>
+    <section id="dialog">
+      <h2>dialog</h2>
+      <section>
+        <button type="button" class="button button--primary" id="dialog-btn1">dialog1</button>
+        <button type="button" class="button button--primary" id="dialog-btn2">dialog2</button>
+        <div class="dialog__wrapper" id="dialog-target1">
+          <div class="dialog">
+            <div class="dialog__header">
+              <span class="dialog__title">常规dialog</span>
+              <button type="button" class="dialog__close" data-dismiss="dialog">&times;</button>
+            </div>
+            <div class="dialog__body">
+              <div>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</div>
+            </div>
+            <div class="dialog__footer dialog__footer--right">
+              <button type="button" class="button button--primary">确认</button>
+              <button type="button" class="button" data-dismiss="dialog">取消</button>
+            </div>
+          </div>
+        </div>
+        <div class="dialog__wrapper" id="dialog-target2">
+          <div class="dialog">
+            <div class="dialog__header">
+              <span class="dialog__title">内容很高的时候</span>
+              <button type="button" class="dialog__close" data-dismiss="dialog">&times;</button>
+            </div>
+            <div class="dialog__body">
+              <div style="height: 1000px;">
+                内容很高的时候内容很高的时候内容很高的时候内容很高的时候内容很高的时候内容很高的时候内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br> 内容很高的时候
+                <br>
+              </div>
+            </div>
+            <div class="dialog__footer dialog__footer--right">
+              <button type="button" class="button button--primary">确认</button>
+              <button type="button" class="button" data-dismiss="dialog">取消</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section id="table">
+      <h2>table</h2>
+      <h4>默认表格</h4>
+      <table class="table">
+        <caption>Optional table caption.</caption>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>带边框</h4>
+      <table class="table table--bordered">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="poptip">
+      <h2>poptip</h2>
+      <button class="button button--primary poptip poptip--top" aria-controls="弹出的文字气泡">poptip</button>
+      <button class="button button--primary poptip poptip--bottom" aria-controls="弹出的文字气泡">poptip</button>
+    </section>
+    <section id="tabs">
+      <h2>tabs</h2>
+      <div class="tabs">
+        <div class="tabs__header">
+          <label class="tabs__item" for="one">用户管理</label>
+          <label class="tabs__item" for="two">角色管理</label>
+          <label class="tabs__item" for="three">配置管理</label>
+        </div>
+        <div class="tabs__content">
+          <div class="tabs__panel">
+            <input id="one">用户管理</div>
+          <div class="tabs__panel">
+            <input id="two">角色管理</div>
+          <div class="tabs__panel">
+            <input id="three">配置管理</div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+    var dialogBtn1 = document.getElementById('dialog-btn1');
+    var dialogBtn2 = document.getElementById('dialog-btn2');
+    var dialogWrap1 = document.getElementById('dialog-target1');
+    var dialogWrap2 = document.getElementById('dialog-target2');
+
+    var dialog1 = babyui.createDialog(dialogWrap1);
+    var dialog2 = babyui.createDialog(dialogWrap2);
+    dialogBtn1.onclick = function (ev) {
+      dialog1.open();
+    }
+    dialogBtn2.onclick = function (ev) {
+      dialog2.open();
+    }
+  </script>
+</body>
+
+</html>
