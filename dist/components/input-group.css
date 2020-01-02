@@ -1,0 +1,59 @@
+/* color variables */
+/* button */
+/* radio */
+/* checkbox */
+.input-group {
+  line-height: normal;
+  display: inline-table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.input-group > .input__inner {
+  vertical-align: middle;
+  display: table-cell;
+}
+.input-group__append,
+.input-group__prepend {
+  background-color: #F2F6FC;
+  color: #555555;
+  vertical-align: middle;
+  display: table-cell;
+  position: relative;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  padding: 0 20px;
+  width: 1px;
+  white-space: nowrap;
+}
+.input-group__append {
+  border-left: 0;
+}
+.input-group__prepend {
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group--append .input__inner {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group--prepend .input__inner,
+.input-group__append {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group__append button.button,
+.input-group__prepend button.button {
+  display: inline-block;
+  margin: -10px -20px;
+  font-size: inherit;
+}
+.input-group__append button.button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group__prepend button.button {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}

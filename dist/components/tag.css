@@ -1,0 +1,23 @@
+/* color variables */
+/* button */
+/* radio */
+/* checkbox */
+.tag {
+  display: inline;
+  padding: 0.2em 0.6em 0.3em;
+  font-size: 75%;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+  background-color: #777;
+}
+.tag--primary {
+  background-color: #38f;
+}
+.tag__close {
+  padding-left: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,27 @@
+/* color variables */
+/* button */
+/* radio */
+/* checkbox */
+.alert {
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 14px;
+  border-color: #dcdfe6;
+  color: rgba(51, 51, 51, 0.8);
+  background-color: #F2F6FC;
+}
+.alert--success {
+  color: #38f;
+  background-color: rgba(51, 136, 255, 0.2);
+  border-color: rgba(51, 136, 255, 0.4);
+}
+.alert--title {
+  font-weight: 700;
+  line-height: 18px;
+}
+.alert__close {
+  float: right;
+  cursor: pointer;
+}

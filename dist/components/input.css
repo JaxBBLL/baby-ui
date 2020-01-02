@@ -1,0 +1,215 @@
+/* color variables */
+/* button */
+/* radio */
+/* checkbox */
+.input {
+  position: relative;
+  font-size: 14px;
+  display: inline-block;
+  width: 100%;
+}
+.input.input--inline {
+  width: 180px;
+}
+.input .input__error {
+  display: none;
+  color: #f56c6c;
+  font-size: 12px;
+  line-height: 1;
+  padding-top: 4px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.input > .input__inner {
+  -webkit-appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #333;
+  display: inline-block;
+  font-size: inherit;
+  height: 40px;
+  line-height: 40px;
+  outline: none;
+  padding: 0 15px;
+  -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 100%;
+}
+.input > .input__inner:hover {
+  border-color: #bec4d1;
+}
+.input > .input__inner:focus {
+  outline: none;
+  border-color: #38f;
+}
+.input > .input__inner.is-error {
+  border-color: #f56c6c;
+}
+.input > .input__inner.is-error + .input__error {
+  display: block;
+}
+.input > .input__inner[disabled],
+.input > .input__inner.is-disabled {
+  background-color: #f4f5f7;
+  cursor: not-allowed;
+}
+.input > .input__inner[disabled]:hover,
+.input > .input__inner.is-disabled:hover {
+  border-color: #dcdfe6;
+}
+.textarea {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: bottom;
+  font-size: 14px;
+}
+.textarea.textarea--inline {
+  width: 180px;
+}
+.textarea .textarea__error {
+  display: none;
+  color: #f56c6c;
+  font-size: 12px;
+  line-height: 1;
+  padding-top: 4px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.textarea__inner {
+  display: block;
+  resize: vertical;
+  padding: 5px 15px;
+  line-height: 1.5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  font-size: inherit;
+  color: #333;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.textarea__inner:hover {
+  border-color: #bec4d1;
+}
+.textarea__inner:focus {
+  outline: none;
+  border-color: #38f;
+}
+.textarea__inner.is-error {
+  border-color: #f56c6c;
+}
+.textarea__inner.is-error + .textarea__error {
+  display: block;
+}
+.textarea__inner[disabled],
+.textarea__inner.is-disabled {
+  background-color: #f4f5f7;
+  cursor: not-allowed;
+}
+.textarea__inner[disabled]:hover,
+.textarea__inner.is-disabled:hover {
+  border-color: #dcdfe6;
+}
+.select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: bottom;
+  font-size: 14px;
+}
+.select.select--inline {
+  width: 180px;
+}
+.select .select__error {
+  display: none;
+  color: #f56c6c;
+  font-size: 12px;
+  line-height: 1;
+  padding-top: 4px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.select__inner {
+  display: block;
+  resize: vertical;
+  padding: 5px 15px;
+  line-height: 1.5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  font-size: inherit;
+  color: #333;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.select__inner:hover {
+  border-color: #bec4d1;
+}
+.select__inner:focus {
+  outline: none;
+  border-color: #38f;
+}
+.select__inner.is-error {
+  border-color: #f56c6c;
+}
+.select__inner.is-error + .select__error {
+  display: block;
+}
+.select__inner[disabled],
+.select__inner.is-disabled {
+  background-color: #f4f5f7;
+  cursor: not-allowed;
+}
+.select__inner[disabled]:hover,
+.select__inner.is-disabled:hover {
+  border-color: #dcdfe6;
+}
+.form .form-group {
+  margin-bottom: 12px;
+}
+.form .form-group__label {
+  float: left;
+  width: 80px;
+  text-align: right;
+  color: #333;
+  line-height: 40px;
+  padding: 0 12px 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.form .form-group__label.is-require:before {
+  content: "*";
+  color: #f56c6c;
+  margin-right: 4px;
+}
+.form .form-group__content {
+  line-height: 40px;
+  margin-left: 80px;
+}
+.form.form--inline .form-group {
+  display: inline-block;
+}
+select[multiple],
+select[size] {
+  height: auto;
+}

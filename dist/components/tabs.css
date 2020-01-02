@@ -1,0 +1,48 @@
+/* color variables */
+/* button */
+/* radio */
+/* checkbox */
+.tabs {
+  position: relative;
+}
+.tabs__header {
+  background-color: #f5f7fa;
+  border-bottom: 1px solid #e4e7ed;
+  margin: 0;
+  overflow: hidden;
+}
+.tabs__item {
+  position: relative;
+  float: left;
+  border: 1px solid #dcdfe6;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+}
+.tabs__item.is-active {
+  background: #38f;
+  color: #fff;
+}
+.tabs__item:not(:first-child) {
+  margin-left: -1px;
+}
+.tabs__content {
+  height: 100px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.tabs__panel {
+  height: 100%;
+  position: relative;
+}
+.tabs__panel > input {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  clip: rect(0 0 0 0);
+}

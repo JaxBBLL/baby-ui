@@ -1,0 +1,27 @@
+/* color variables */
+/* button */
+/* radio */
+/* checkbox */
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #F2F6FC;
+  border-radius: 4px;
+}
+.breadcrumb > .breadcrumb__item {
+  display: inline-block;
+}
+.breadcrumb > .breadcrumb__item a {
+  color: #38f;
+  text-decoration: none;
+}
+.breadcrumb > .breadcrumb__item.active,
+.breadcrumb > .breadcrumb__item.active a {
+  color: #555555;
+}
+.breadcrumb > .breadcrumb__item + .breadcrumb__item:before {
+  padding: 0 5px;
+  color: #eeeeee;
+  content: "/\00a0";
+}

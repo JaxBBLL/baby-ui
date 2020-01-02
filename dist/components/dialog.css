@@ -1,0 +1,107 @@
+/* color variables */
+/* button */
+/* radio */
+/* checkbox */
+.dialog__wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  background-color: rgba(25, 28, 34, 0.88);
+  text-align: center;
+  font-size: 0;
+  overflow: auto;
+  z-index: 3000;
+  white-space: nowrap;
+  display: none;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.dialog__wrapper.in {
+  display: block;
+}
+.dialog__wrapper:after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 90%;
+  vertical-align: middle;
+}
+.dialog__wrapper .dialog {
+  display: inline-block;
+  text-align: left;
+  border-radius: 4px;
+  background-color: #fff;
+  vertical-align: middle;
+  outline: 0;
+  position: relative;
+  font-size: 14px;
+  width: auto;
+  white-space: normal;
+  -webkit-transition: all 3s;
+  -o-transition: all 3s;
+  transition: all 3s;
+}
+.dialog__wrapper .dialog__header {
+  padding: 10px 15px;
+  border-bottom: 1px solid #dcdfe6;
+}
+.dialog__wrapper .dialog__title {
+  line-height: 24px;
+  font-size: 18px;
+  color: #333;
+}
+.dialog__wrapper .dialog__close {
+  float: right;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #555555;
+}
+.dialog__wrapper .dialog__body {
+  padding: 15px;
+  min-height: 60px;
+  overflow: auto;
+  min-width: 300px;
+}
+.dialog__wrapper .dialog__footer {
+  padding: 10px 15px;
+}
+.dialog__wrapper .dialog__footer.dialog__footer--center {
+  text-align: center;
+}
+.dialog__wrapper .dialog__footer.dialog__footer--right {
+  text-align: right;
+}
+@media (max-width: 480px) {
+  .dialog {
+    max-width: 300px;
+  }
+}
+@media (min-width: 480px) {
+  .dialog {
+    max-width: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .dialog {
+    max-width: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .dialog {
+    max-width: 700px;
+  }
+}
+@media (min-width: 1200px) {
+  .dialog {
+    max-width: 900px;
+  }
+}
